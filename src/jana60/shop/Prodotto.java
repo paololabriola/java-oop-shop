@@ -1,6 +1,8 @@
 package jana60.shop;
 
 import java.text.DecimalFormat;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Prodotto {
 	//Attributi della classe.
@@ -22,7 +24,7 @@ public class Prodotto {
 		
 	}
 	//Metodo calcolo del prezzo totale del prodotto aggiungendo l'iva al prezzo di base.
-	public float calcolaPrezzoTotale() {
+	public float calcolaPrezzoFinale() {
 		
 		return prezzoProdotto + ((prezzoProdotto*ivaProdotto)/100);
 		
@@ -30,7 +32,7 @@ public class Prodotto {
 	//Metodo di stampa di tipo void, che non resituisce alcun valore ma in grado solo di stampare un println.
 	public void stampaPrezzoProdotto() {
 		
-		System.out.println("Il prezzo del prodotto " + nomeProdotto + " di marca " + marcaProdotto + " è pari a " + df.format(calcolaPrezzoTotale()));
+		System.out.println("Il prezzo del prodotto " + nomeProdotto + " di marca " + marcaProdotto + " è pari a " + df.format(calcolaPrezzoFinale()));
 		
 	}
 	

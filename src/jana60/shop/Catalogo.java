@@ -13,7 +13,7 @@ public class Catalogo {
 		//Dichiarazione variabile di tipo Scanner per prendere i valori in input.
 		Scanner scan = new Scanner(System.in);
 		//Dichiarazione oggetto prodotto1 di classe Prodotto con annesse variabili per la costruzione di quest'ultimo.
-		Prodotto[] prodotto = new Prodotto[2];
+		Prodotto prodotto[] = new Prodotto[2];
 		
 		//Inizializzazione delle variabili nel ciclo:
 		for(int i = 0; i < 2; i++) {
@@ -31,19 +31,19 @@ public class Catalogo {
 			System.out.print("Inserisci la percentuale dell'iva sul " + (i+1) + "° prodotto: ");
 			iva = scan.nextInt();
 			
-			scan.nextLine();
+			scan.nextLine(); /* Per pulire il buffer. */
 			
 			prodotto[i] = new Prodotto(marca, nome, prezzo, iva);
 			
-		
 		}
-			
 		
-		for(int i=0;i<2;i++) {
-			
-		//Richiamo metodo della classe prodotto che stampa il prezzo finale del prodotto.
-		prodotto[i].stampaPrezzoProdotto();
+		System.out.format("%25s %10s %25s %10s %10s %10s %10s", "Nome del prodotto", "|", "Marca del prodotto", "|", "Prezzo (€)", "|", "Prezzo + IVA");
 		
+		for(int i=0; i < 5; i++) {
+			
+			System.out.println();
+			System.out.format("%25s %10s %25s %10s %10.2f %10s %10.2f", prodotto[i].nomeProdotto, "|", prodotto[i].marcaProdotto, "|", prodotto[i].prezzoProdotto, "|", prodotto[i].calcolaPrezzoFinale());
+			
 		}
 		//Chiusura dello scanner.
 		scan.close();
