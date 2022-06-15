@@ -10,7 +10,7 @@ public class Prodotto {
 	//Dichiarazione variabile df di classe decimal format che serve a mantenere sempre 2 cifre dopo la virgola essenziali per quando si fa riferimenti a prezzi.
 	DecimalFormat df = new DecimalFormat(".00€");
 	
-	/* public Prodotto() {} metodo costruttore che ci permette di creare un oggetto, lasciandoci la possibilità di assegnargli i valori in seguito nel codice. */
+	public Prodotto() {} /* metodo costruttore che ci permette di creare un oggetto, lasciandoci la possibilità di assegnargli i valori in seguito nel codice. */
 	//Metodo costruttore
 	public Prodotto(String marca, String nomeProdotto, float prezzo, int iva) {
 		
