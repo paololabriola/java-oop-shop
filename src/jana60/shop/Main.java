@@ -6,8 +6,7 @@ public class Main {
 
 	public static void main(String[] args) {
 		
-		String marca;
-		String nome;
+		String marca, nome;
 		float prezzo;
 		int iva;
 		
@@ -22,12 +21,12 @@ public class Main {
 		System.out.println("Inserisci il prezzo del prodotto");
 		prezzo = scan.nextFloat();
 		
-		System.out.println("Inserisci l'iva del prodotto");
+		System.out.println("Inserisci la percentuale dell'iva sul prodotto");
 		iva = scan.nextInt();
 		
-		Prodotto prodotto = new Prodotto(marca, nome, prezzo, iva);
+		Prodotto prodotto1 = new Prodotto(marca, nome, prezzo, iva);
 		
-		A.stampaPrezzoProdotto();
+		prodotto1.stampaPrezzoProdotto();
 		
 		scan.close();
 	
