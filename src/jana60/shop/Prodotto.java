@@ -32,6 +32,7 @@ public class Prodotto {
 	//Metodo di stampa di tipo void, che non resituisce alcun valore ma in grado solo di stampare un println.
 	public void stampaPrezzoProdotto() {
 		
+		this.marcaProdotto = "apple";
 		System.out.println("Il prezzo del prodotto " + nomeProdotto + " di marca " + marcaProdotto + " è pari a " + df.format(calcolaPrezzoFinale()));
 		
 	}

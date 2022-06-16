@@ -1,5 +1,6 @@
 package jana60.shop;
 
+import java.lang.ref.Cleaner;
 import java.util.Scanner;
 
 public class Catalogo {
@@ -52,8 +53,8 @@ public class Catalogo {
 			//Assegnazioni valori appena presi in input ad un oggetto prodotto dell'array di tipo Prodotto dichiarato a inizio codice.
 			prodotto[i] = new Prodotto(marca, nome, prezzo, iva);
 			
-		}
-		//Stampa indice della tabella.
+		}		
+		//Formattazione dell'indice della tabella.
 		System.out.format("%25s %10s %25s %10s %10s %10s %10s", "Nome del prodotto", "|", "Marca del prodotto", "|", "Prezzo (€)", "|", "Prezzo + IVA");
 		//Per mandare a capo il separatore
 		System.out.println();
@@ -63,7 +64,7 @@ public class Catalogo {
 		for(int i=0; i < dimensioneCatalogo; i++) {
 			//Print per far andare a capo la riga della tabella.
 			System.out.println();
-			//Separazione del 25% dello spazio a sua disposizione per la stringa nome e quella marca del prodotto, per i prezzi float invece solo il 10% stesso valore assegnato ai separatori.
+			//Formattazione tabella
 			System.out.format("%25s %10s %25s %10s %10.2f %10s %10.2f", prodotto[i].nomeProdotto, "|", prodotto[i].marcaProdotto, "|", prodotto[i].prezzoProdotto, "|", prodotto[i].calcolaPrezzoFinale());
 			
 		}
